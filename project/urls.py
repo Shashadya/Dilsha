@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from store import views as storeviews
+from user_accounts import views as user
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -26,10 +27,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Add this line to include store app URLs at the root
-    path('', storeviews.storehome),
+    # path('', storeviews.storehome),
+    path('', user.login_user),
 
     path('store/', include('store.urls')),
 
-    
+    path('user/', include('user_accounts.urls')),
+
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

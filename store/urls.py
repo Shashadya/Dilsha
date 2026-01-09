@@ -9,7 +9,6 @@ urlpatterns = [
     path('reviews/', views.reviews, name='reviews'),
     path('category/', views.category, name='category'),
     # path('shop/', views.shop, name='shop'),
-
     path('product/<int:product_id>', views.product, name='product'),
     path('shop/<str:category>/', views.shop, name='shop_by_category'),
 

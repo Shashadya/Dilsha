@@ -17,9 +17,10 @@
 
             <div class="search_section">
                 <ul>
-                    <li><a href="#">Log In</a></li>
-                    <li><a href="#"><img src="{% static 'images/shopping-bag.png' %}"></a></li>
-                    <li><a href="#"><img src="{% static 'images/search-icon.png' %}"></a></li>
+                    <li><a href="{% url 'login_user' %}">Log In</a></li>
+                    <li><a href="{% url 'logout_user' %}">Log out</a></li>
+                    <!-- <li><a href="#"><img src="{% static 'images/shopping-bag.png' %}"></a></li>
+                    <li><a href="#"><img src="{% static 'images/search-icon.png' %}"></a></li> -->
                 </ul>
             </div>
 
